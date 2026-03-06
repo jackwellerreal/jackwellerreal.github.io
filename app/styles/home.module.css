@@ -266,6 +266,7 @@
 
 .main .content li {
     margin-top: 10px;
+    margin-left: 20px;
     font-size: var(--font-small);
     font-weight: 400;
 }
