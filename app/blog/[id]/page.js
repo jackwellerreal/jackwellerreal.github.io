@@ -46,12 +46,14 @@ export async function generateMetadata({ params }) {
     }
 }
 
-export default function BlogItemPage({ params }) {
+export default async function BlogItemPage({ params }) {
+    const { id } = await params;
+
     return (
         <div className={styles["container"]}>
             <Header />
             <main className={styles["main"]}>
-                <BlogContent blogId={params.id} />
+                <BlogContent blogId={id} />
             </main>
             <Footer />
         </div>

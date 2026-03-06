@@ -68,7 +68,9 @@ export default function BlogContent({ blogId }) {
     return (
         <>
             <div className={styles["title"]}>
-                <img src={metadata.image} alt="Blog title" />
+                {metadata.image && (
+                    <img src={metadata.image} alt="Blog title" />
+                )}
                 <h1>{metadata.title}</h1>
                 <p className={styles["subtitle"]}>
                     <span>{moment(metadata.date, "DD/MM/YYYY").fromNow()}</span>
